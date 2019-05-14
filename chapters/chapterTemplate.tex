@@ -1,0 +1,93 @@
+% Chapter Template
+
+% Main chapter title
+% Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{chapterX}
+\chapter{Chapter Title Here}\label{chapterX}
+
+\lipsum[1]
+
+%----------------------------------------------------------------------------------------
+%	Heading on Level 1 (section)
+%----------------------------------------------------------------------------------------
+
+\section{Heading on Level 1 (section)}
+
+\lipsum[2]
+
+%-----------------------------------
+%	Heading on Level 2 (subsection)
+%-----------------------------------
+
+\subsection{Heading on Level 2 (subsection)}
+
+\lipsum[3]
+
+%-----------------------------------
+%	Heading on Level 3 (subsubsection)
+%-----------------------------------
+
+\subsubsection{Heading on Level 3 (subsubsection)}
+
+\lipsum[4]
+
+%-----------------------------------
+%	Heading on Level 4 (paragraph)
+%-----------------------------------
+
+\paragraph{Heading on Level 4 (paragraph)}
+
+\lipsum[5]
+
+%----------------------------------------------------------------------------------------
+%	Figures, Tables and Listings
+%----------------------------------------------------------------------------------------
+
+\section{Cite, Footnote, Figure, Table and Listings}
+
+Lorem ipsum~\cite{loremlipsum} dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulumut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. 
+
+\subsection{Figure}
+
+The figure \ref{fig:appleblossom1} is a framed image of apples to be.
+
+\begin{figure}[ht!]
+    \frame{\includegraphics[width=0.7\linewidth]{images/lnu_apple_blossom.jpg}}
+    \caption{Apple blossom.}
+    \label{fig:appleblossom1}
+\end{figure}
+
+\subsection{Table}
+
+The table \ref{table:simpletable} is a simple one.
+
+\begin{table}[ht!]
+    \begin{tabular}{ |c|c|c| } 
+        \hline
+        Col1 & Col2 & Col3 \\
+        \hline
+        cell1 & cell2 & cell3 \\ 
+        cell4 & cell5 & cell6 \\ 
+        cell7 & cell8 & cell9 \\ 
+        \hline
+    \end{tabular}
+    \caption{A simple table.}
+    \label{table:simpletable}
+\end{table}
+
+\subsection{Listings}
+
+The listing \ref{lst:pythonhello} is a simple Python example.
+
+\begin{lstlisting}[caption=Python example, label=lst:pythonhello, language=python]
+# This is a comment
+firstVariable = 'Hello World'
+print(firstVariable.upper())
+\end{lstlisting}
+
+The listing \ref{lst:jshello} is a simple JavaScript\footnote{No official syntax highlighting is available for the JavaScript language.} example.
+
+\begin{lstlisting}[caption=JavaScript example, label=lst:jshello]
+// This is a comment
+let firstVariable = 'Hello World'
+console.log(firstVariable.toUpperCase())
+\end{lstlisting}

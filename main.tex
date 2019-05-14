@@ -1,0 +1,103 @@
+%----------------------------------------------------------------------------------------
+% Packages and other document configurations
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+    swedish, english,                % english main language
+%    english,swedish,                % swedish main language
+]{LnuCmThesis}
+
+\usepackage{settings}
+
+\addbibresource{example.bib}
+%\addbibresource{example2.bib} % Additional bib file.
+
+%\watermark % DRAFT is the default watermark text
+%\watermark[UTKAST]
+
+%----------------------------------------------------------------------------------------
+% Thesis information
+%----------------------------------------------------------------------------------------
+
+%\title{}      % Your Title/Din titel
+%\subtitle{}   % Your Subtitle/Din undertitel
+%\author{}     % Your Name/Ditt namn
+%\supervisor{} % Your Supervisor/Din handledare
+
+\begin{document}
+
+\frontmatter{} % Use roman page numbering style (i, ii, iii, iv...) for the front matters pages
+
+%----------------------------------------------------------------------------------------
+% Title page
+%----------------------------------------------------------------------------------------
+
+\maketitle
+
+%----------------------------------------------------------------------------------------
+% Abstract page
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+    \lipsum[1]
+
+    \keywords{lorem\cite{loremlipsum}, ipsum, dolor, sit, amet, consectetuer, adipiscing, elit}
+\end{abstract}
+
+% Abstract in secondary language
+\begin{abstract}[swedish] %[english] 
+    Träutensilierna i ett tryckeri äro ingalunda en faktor där trevnadens ordningens och ekonomiens upprätthållande, och dock är det icke sällan som sorgliga erfarenheter göras ordningens och ekon och miens därmed upprätthållande. Träutensilierna i ett tryckeri äro ingalunda en oviktig faktor, för trevnadens ordningens och och dock är det icke sällan.
+
+    \keywords{träutensilierna, tryckeri, äro, ingalunda, faktor, trevnadens, ordningens}
+\end{abstract}
+
+%----------------------------------------------------------------------------------------
+% Acknowledgements page
+%----------------------------------------------------------------------------------------
+
+\begin{acknowledgements}
+    \lipsum[1]
+\end{acknowledgements}
+
+%----------------------------------------------------------------------------------------
+% Table of Contents and list of Figures/Tables/Listings pages
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Prints the main table of contents
+
+\listoffigures % Prints the list of figures
+
+\listoftables % Prints the list of tables
+
+\lstlistoflistings{} % Prints the list of listings
+
+%----------------------------------------------------------------------------------------
+% Thesis content - Chapters
+%----------------------------------------------------------------------------------------
+
+\mainmatter{} % Use numeric page numbering style (1, 2, 3, 4...) for the content pages.
+
+\include{chapters/chapter01}
+%\include{chapters/chapter02}
+%\include{chapters/chapter03}
+
+%----------------------------------------------------------------------------------------
+% References
+%----------------------------------------------------------------------------------------
+
+\printbibliography[heading=bibintoc]
+
+%----------------------------------------------------------------------------------------
+% Appendices
+%----------------------------------------------------------------------------------------
+
+\begin{appendices} % Switches the document from generating chapters to producing appendices.
+
+    \input{appendices/appendixA}
+    %\input{appendices/AppendixB}
+    %\input{appendices/AppendixC}
+
+\end{appendices}
+
+\backmatter{}
+\end{document}
