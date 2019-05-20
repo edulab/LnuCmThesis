@@ -339,6 +339,16 @@
   showstringspaces=false,
   tabsize=2,                           % Size of tabs
   xleftmargin=0pt,
+  literate=%
+  {Ö}{{\"O}}1
+  {Ä}{{\"A}}1
+  {Å}{{\AA{}}}1
+  {Ü}{{\"U}}1
+  {ß}{{\ss}}1
+  {ü}{{\"u}}1
+  {ö}{{\"o}}1
+  {ä}{{\"a}}1
+  {å}{{\aa{}}}1
 }
 
 \lstset{style=defaultstyle}
