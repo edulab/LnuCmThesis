@@ -113,7 +113,7 @@
 \RequirePackage{xcolor}
 \RequirePackage[parfill]{parskip}
 \RequirePackage{titlesec}
-\RequirePackage[style=ieee]{biblatex}
+\RequirePackage[style=ieee,urldate=iso,seconds=true]{biblatex}
 \RequirePackage{csquotes}
 \RequirePackage{lipsum}
 \RequirePackage{blindtext}
@@ -583,13 +583,18 @@
 %	References page
 %----------------------------------------------------------------------------------------
 
+\RequirePackage{silence}
+\WarningFilter{biblatex}{File 'english-ieee.lbx'}
+\WarningFilter{biblatex}{File 'swedish-ieee.lbx'}
+
 \DefineBibliographyStrings{english}{%
   bibliography = {References}}
 \DefineBibliographyStrings{swedish}{%
-  bibliography = {Referenser}}
+  bibliography = {Referenser},
+  url          = {[Online]\adddot\addspace Tillgänglig}}
 
 %----------------------------------------------------------------------------------------
-%	References page
+%	Hyper
 %----------------------------------------------------------------------------------------
 
 \RequirePackage[colorlinks]{hyperref}
